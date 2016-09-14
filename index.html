@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Brno docker meetup</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<img src="img/large_h-trans.png" />
+					<h1>Brno docker meetup</h1>
+					<h2>Summer is over</h2>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>What’s new in docker?
+							<ul><li><em>Tomáš Tomeček</em></li></ul>
+						</li>
+						<li>Rolling Down the Upgrade River doesn't need to be a White Water Experience
+							<ul><li><em>Josef Karásek</em></li></ul>
+						</li>
+						<li>Ansible Container: building a Docker image without a Dockerfile and shell
+							<ul><li><em>Vadim Rutkovsky</em></li></ul>
+						</li>
+						<li>Kompose
+							<ul><li><em>Tomáš Král</em></li></ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Sponsors</h2>
+					<ul>
+						<li>Kiwi.com</li>
+						<li>Red Hat</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Next meetup</h2>
+					<h3>Save the date!</h3>
+					<h1>December 1st, 2016</h1>
+				</section>
+
+				<section>
+					<h2>Next meetup (2)</h2>
+					<h3>Speakers wanted!</h3>
+					<p>Any topic related to containers:</p>
+					<ul>
+						<li>Development Use Case Studies</li>
+						<li>Production Case Studies</li>
+						<li>Orchestrators</li>
+						<li>Meta-Container Information</li>
+						<li>Ideas from <i aria-hidden="true" class="fa fa-github-square"></i> <a href="https://github.com/docker/community/">docker/community</a> → <a href="https://github.com/docker/community/tree/master/Docker-Meetup-Content">Docker-Meetup-Content</a></li>
+						<li>Regular Talks and Lightning Talks</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Next meetup (3)</h2>
+					<h3>Sponsors wanted!</h3>
+					<ul>
+						<li>Food, drinks, place, beer...</li>
+					</ul>
+				</section>
+
+				<section>
+					<ul style="list-style-type: none;">
+						<li><i aria-hidden="true" class="fa fa-twitter-square"></i> @DockerBrno</li>
+						<li><i aria-hidden="true" class="fa fa-facebook-square"></i> facebook.com/DockerBrno</li>
+						<li><i aria-hidden="true" class="fa fa-comments"></i> meetup.com/Docker-Brno</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>News</h1>
+				</section>
+
+				<section>
+					<h2>docker 1.12</h2>
+					<ul>
+						<li>1.12.0 — released July 28th</li>
+						<li>1.12.1 — released August 18th</li>
+						<li>Built-in orchestration</li>
+						<li>Load balancing</li>
+						<li>Routing</li>
+						<li>Service API</li>
+						<li>Plugin API</li>
+						<li>Distributed application bundle — multi-container applications</li>
+						<li>New <code>HEALTHCHECK</code> instruction</li>
+						<li><code>--live-restore</code> daemon flag</li>
+						<li><code>docker</code> client binary and <code>dockerd</code> daemon</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>swarm: optional, backwards compat, no overhead</li>
+							<li>swarm: Linux IPVS</li>
+							<li>dab: build on top of services</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2>More info</h2>
+					<ul>
+						<li><a href="http://www.slideshare.net/Docker/whats-new-in-docker-112-by-mike-goelzer-and-andrea-luzzardi">http://www.slideshare.net/Docker/whats-new-in-docker-112-by-mike-goelzer-and-andrea-luzzardi</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Questions are welcome!</h2>
+					<ul style="list-style-type: none;">
+						<li><i aria-hidden="true" class="fa fa-twitter-square"></i> @TomasTomec</li>
+						<li><i aria-hidden="true" class="fa fa-github-square"></i> TomasTomecek/brno-docker-meetup-september-2016</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				slideNumber: true,
+				transition: 'none',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
